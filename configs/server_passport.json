@@ -1,0 +1,12 @@
+﻿{
+    "recorded_at":  "2026-11-18T00:36:39.8274214+07:00",
+    "base_url":  "http://127.0.0.1:8080",
+    "model_path":  "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "model_size_bytes":  2497280736,
+    "model_sha256":  "2FDE00CE69DD4899C70D020845E2638353015BBA0FDF161B3EB965F2BCA4464E",
+    "server_path":  "C:\\Users\\卓大王\\AppData\\Local\\Microsoft\\WinGet\\Packages\\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\\llama-server.exe",
+    "server_sha256":  "FE2957C5FC9DEFB76279A513EA58153B5990C14AF8E2C9D2150C2D194BF72668",
+    "server_file_version":  null,
+    "server_command_line":  "llama-server  -m D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf --verbosity 4 --device Vulkan1 --gpu-layers all --ctx-size 32768 --parallel 1 --threads 8 --cache-type-k f16 --cache-type-v f16 --no-cache-prompt --cache-ram 0 --jinja --host 127.0.0.1 --port 8080 ",
+    "server_process_id":  25784
+}
