@@ -1,0 +1,15 @@
+﻿.venv/
+__pycache__/
+*.py[cod]
+.vscode/
+
+mlflow.db*
+mlruns/
+mlartifacts/
+logs/
+results/
+screenshots/
+
+*.zip
+.env
+.env.*
