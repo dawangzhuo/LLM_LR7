@@ -1,3 +1,4 @@
+import os
 import argparse
 import hashlib
 import json
@@ -96,7 +97,7 @@ def main():
         "split": args.split,
         "task_ids": task_ids,
         "runs_per_task": args.runs,
-        "tracing": tracing,
+        "pythonhashseed": os.environ.get("PYTHONHASHSEED"),
         "evaluation_commit": commit,
         "manifest_path": manifest_path.relative_to(ROOT).as_posix(),
         "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
