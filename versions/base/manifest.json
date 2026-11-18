@@ -1,18 +1,20 @@
 {
   "version": "base",
-  "recorded_at_utc": "2026-11-18T08:45:05.962314+00:00",
-  "git_commit": "9ced5562314fdd02b44a5ab9d7f222304f3d3ce6",
+  "recorded_at_utc": "2026-11-18T10:24:02.937694+00:00",
+  "git_commit": "d849ce070595c8868026a3855d5db507a58e9f76",
   "working_tree_clean": true,
   "file_sha256": {
     ".gitignore": "dfdb46edec5511638ceb4fb7c13b5e6fa8733790851c50d2618070b90d259155",
+    "check_identical_request.py": "2218c13c351a9f80320cc4d03dd60ce3209a6fa6d9e54b4a4e2ff560cd547d81",
     "check_react_live.py": "a683084f49cf6632fa150d3e52674780e0e34f82472cb53e8f83f161963406a0",
     "check_react_loop.py": "f72206ca0f8fad1e1740ddaa925531c61d130c67cdf8436ec703ef50a87cde1f",
     "check_tracing_live.py": "7277872a5873db24c37032170e6957f06a00fe3a1203e7ee8e0cf68dbb7e0550",
+    "compare_tracing.py": "f3336a626aa158165748ff11a4cf2b638c7322fd4e815881cc31b99fff79aee1",
     "configs/server_passport.json": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104",
     "data/manifest.json": "0c9b0149c25d9e53752bdfa736b3dba15b66b657a3cf85053cb6b4927f236521",
     "data/task_ids.txt": "471b3dabde058ae6ec98117672c002073613328ff841923e07c61d24e8fa5194",
     "episode_tools.py": "3f82b143fb19d6e2abbfa5e96e88f887160b88f02da0f3077b489c4f0578a5b2",
-    "eval.py": "d183a0158f5f748d1c9274ac53a0784a8672e27673ce13b6a12b1ed6d0bce092",
+    "eval.py": "a34aad8161d4d61770540fa0d0db06adcce3642f7e6c4875463d1131ed59608d",
     "model_client.py": "75c9fe631011b0fccfb37257da72d2d56e617267fff888b52a5cb0cdbed8aef8",
     "prediction.md": "4ad2b0228b9335c5bec4ad8355847497478d84827bb46e43618a16bf08999d47",
     "prepare_version.py": "78f49d9fd186ebea7260556d4481f06d561ba83a1b84d40a82ded541db665792",
@@ -22,7 +24,8 @@
     "requirements.txt": "ef7fd9538a0800b2d1fe87fa06c326c11abdcd64ca075dc4a05c7a0acf1c0551",
     "test_episode_tools.py": "cb9ed30040ee8f4c1b6ebf2f554e6edb806e2b7d1e1083ab493c863b4a62c8bd",
     "test_tool_executor.py": "08233e7508778e53177a2c433dd82df47337705e22758c8bf87f19e7fd2de824",
-    "tool_executor.py": "358b0bb3d5d872785f92cb2bfcf93c4871f611e61cc2b661976c8b1fa066d2d4"
+    "tool_executor.py": "358b0bb3d5d872785f92cb2bfcf93c4871f611e61cc2b661976c8b1fa066d2d4",
+    "update_manifest_hashes.py": "2266e88bec29e5fb4fe7a8b0d74e2d75d49afb564a42e10932ad3c590e83fca2"
   },
   "tool_descriptions_sha256": "e5ee7300547cdf1a5a94af10beae8739a2d4c26a0ff7aaede3c33a6c1399aeda",
   "tool_descriptions_file": "tool_descriptions.json",
@@ -263,5 +266,8 @@
     "server_command_line": "llama-server  -m D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf --verbosity 4 --device Vulkan1 --gpu-layers all --ctx-size 32768 --parallel 1 --threads 8 --cache-type-k f16 --cache-type-v f16 --no-cache-prompt --cache-ram 0 --jinja --host 127.0.0.1 --port 8080 ",
     "server_process_id": 25784
   },
-  "server_passport_sha256": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104"
+  "server_passport_sha256": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104",
+  "environment": {
+    "PYTHONHASHSEED": "0"
+  }
 }
