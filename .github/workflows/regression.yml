@@ -58,15 +58,15 @@ jobs:
             Tee-Object -FilePath ci_output/negative_control.log
           exit $LASTEXITCODE
 
-      - name: Compare baseline and AA summaries
+      - name: Compare baseline and truncation candidate
         if: ${{ always() && steps.tests.outcome != 'skipped' }}
         run: |
           $arguments = @(
             "gate.py",
             "eval/base_final_20261118_172416_841840/summary.json",
-            "eval/base_final_20261118_174828_168091/summary.json",
+            "eval/truncate2000_final_20261118_190525_502247/summary.json",
             "--report",
-            "ci_output/AA_gate_report.md"
+            "ci_output/truncate2000_gate_report.md"
           )
 
           if ("${{ steps.tests.outcome }}" -ne "success") {
