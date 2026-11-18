@@ -198,7 +198,8 @@ def dashboard(result, base, candidate):
                 if row["task_id"] == task:
                     lines.append(
                         f"- {label}, run {row['run']}, "
-                        f"utility={row['utility']}, trace `{row.get('trace_id')}`, "
+                        f"utility={row['utility']}, "
+                        f"[trace {row.get('trace_id')}](http://127.0.0.1:5007/#/experiments/{row.get('experiment_id', '3')}/traces?workflowType=genai&traceId={row.get('trace_id')}), "
                         f"record `{row.get('record_path')}`"
                     )
     return "\n".join(lines) + "\n"
