@@ -1,21 +1,24 @@
 {
   "version": "base",
-  "recorded_at_utc": "2026-11-17T17:35:16.016925+00:00",
-  "git_commit": "7c5aff6ceb55546c32e040f82803bb58a2bdf888",
+  "recorded_at_utc": "2026-11-18T08:45:05.962314+00:00",
+  "git_commit": "9ced5562314fdd02b44a5ab9d7f222304f3d3ce6",
   "working_tree_clean": true,
   "file_sha256": {
     ".gitignore": "dfdb46edec5511638ceb4fb7c13b5e6fa8733790851c50d2618070b90d259155",
     "check_react_live.py": "a683084f49cf6632fa150d3e52674780e0e34f82472cb53e8f83f161963406a0",
     "check_react_loop.py": "f72206ca0f8fad1e1740ddaa925531c61d130c67cdf8436ec703ef50a87cde1f",
     "check_tracing_live.py": "7277872a5873db24c37032170e6957f06a00fe3a1203e7ee8e0cf68dbb7e0550",
+    "configs/server_passport.json": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104",
     "data/manifest.json": "0c9b0149c25d9e53752bdfa736b3dba15b66b657a3cf85053cb6b4927f236521",
     "data/task_ids.txt": "471b3dabde058ae6ec98117672c002073613328ff841923e07c61d24e8fa5194",
     "episode_tools.py": "3f82b143fb19d6e2abbfa5e96e88f887160b88f02da0f3077b489c4f0578a5b2",
+    "eval.py": "d183a0158f5f748d1c9274ac53a0784a8672e27673ce13b6a12b1ed6d0bce092",
     "model_client.py": "75c9fe631011b0fccfb37257da72d2d56e617267fff888b52a5cb0cdbed8aef8",
     "prediction.md": "4ad2b0228b9335c5bec4ad8355847497478d84827bb46e43618a16bf08999d47",
     "prepare_version.py": "78f49d9fd186ebea7260556d4481f06d561ba83a1b84d40a82ded541db665792",
     "prompts/react_system.txt": "926809726ebba0bee5b2d6b2c84109e8de4f0b6dd893146ba6582323e80cceaf",
     "react_loop.py": "6336cc4947dc343e7242dc2e863c02680e2fbe3e8ca78f42fbe6fc978bc3bf8c",
+    "refresh_base_manifest.py": "7a6aefe625294b3e9f0a140d57f2bc184d37ab7c8d27d94a1696d908917d2831",
     "requirements.txt": "ef7fd9538a0800b2d1fe87fa06c326c11abdcd64ca075dc4a05c7a0acf1c0551",
     "test_episode_tools.py": "cb9ed30040ee8f4c1b6ebf2f554e6edb806e2b7d1e1083ab493c863b4a62c8bd",
     "test_tool_executor.py": "08233e7508778e53177a2c433dd82df47337705e22758c8bf87f19e7fd2de824",
@@ -247,5 +250,18 @@
       "is_sleeping": false,
       "cors_proxy_enabled": false
     }
-  }
+  },
+  "server_passport": {
+    "recorded_at": "2026-11-18T00:36:39.8274214+07:00",
+    "base_url": "http://127.0.0.1:8080",
+    "model_path": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "model_size_bytes": 2497280736,
+    "model_sha256": "2FDE00CE69DD4899C70D020845E2638353015BBA0FDF161B3EB965F2BCA4464E",
+    "server_path": "C:\\Users\\卓大王\\AppData\\Local\\Microsoft\\WinGet\\Packages\\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\\llama-server.exe",
+    "server_sha256": "FE2957C5FC9DEFB76279A513EA58153B5990C14AF8E2C9D2150C2D194BF72668",
+    "server_file_version": null,
+    "server_command_line": "llama-server  -m D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf --verbosity 4 --device Vulkan1 --gpu-layers all --ctx-size 32768 --parallel 1 --threads 8 --cache-type-k f16 --cache-type-v f16 --no-cache-prompt --cache-ram 0 --jinja --host 127.0.0.1 --port 8080 ",
+    "server_process_id": 25784
+  },
+  "server_passport_sha256": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104"
 }
