@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import subprocess
+from candidate_tools import make_executor
 from contextlib import nullcontext
 from datetime import datetime
 from pathlib import Path
@@ -41,7 +42,11 @@ def write_json(path, value):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--version", choices=["base"], required=True)
+    parser.add_argument(
+    "--version",
+    choices=["base", "truncate2000", "truncate2000_notice"],
+    required=True,
+)
     parser.add_argument("--runs", type=int, default=3)
     parser.add_argument("--split", choices=["debug", "final"], default="final")
     parser.add_argument("--task-id")
@@ -120,6 +125,7 @@ def main():
     for run_number in range(1, args.runs + 1):
         for task_id in task_ids:
             agent = LiveReact(client, prompt)
+            tool_records = []
             task = suite.get_user_task_by_id(task_id)
             trace_id = None
             utility = None
@@ -150,12 +156,11 @@ def main():
                             "split": args.split,
                         })
 
-                    tool_context = (
-                        patch(
-                            "episode_tools.execute_tool",
-                            side_effect=traced_execute_tool,
-                        )
-                        if tracing else nullcontext()
+                        tool_context = patch(
+                        "episode_tools.execute_tool",
+                        side_effect=make_executor(
+                            args.version, tracing, tool_records
+                        ),
                     )
                     with tool_context:
                         utility, _ = suite.run_task_with_pipeline(
@@ -201,10 +206,14 @@ def main():
                 "experiment_id": experiment.experiment_id,
             }
             record_path = records_dir / f"{task_id}_run{run_number}.json"
+            row["truncated_tool_results"] = sum(
+                record["truncated"] for record in tool_records
+            )
             write_json(record_path, {
                 **row,
                 "episode": agent.episode,
                 "model_trace": agent.model_trace,
+                "tool_results": tool_records,
             })
             row["record_path"] = record_path.relative_to(ROOT).as_posix()
             summary["results"].append(row)
