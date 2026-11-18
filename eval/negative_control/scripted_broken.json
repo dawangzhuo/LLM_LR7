@@ -1,0 +1,331 @@
+{
+  "batch_id": "scripted_broken",
+  "version": "scripted_broken",
+  "split": "debug",
+  "task_ids": [
+    "user_task_0"
+  ],
+  "runs_per_task": 3,
+  "benchmark_version": "v1.2.2",
+  "suite": "workspace",
+  "evaluation_commit": "b26ee40f3fe4a4e14c81b50c04bd7541d2726975",
+  "manifest_path": "versions/base/manifest.json",
+  "manifest_sha256": "8748937fcff760a03d6935c0b013d2058ebf455c5f34b39c6faaef2c52d4a399",
+  "version_manifest": {
+    "version": "base",
+    "recorded_at_utc": "2026-11-18T10:24:02.937694+00:00",
+    "git_commit": "d849ce070595c8868026a3855d5db507a58e9f76",
+    "working_tree_clean": true,
+    "file_sha256": {
+      ".gitignore": "dfdb46edec5511638ceb4fb7c13b5e6fa8733790851c50d2618070b90d259155",
+      "check_identical_request.py": "2218c13c351a9f80320cc4d03dd60ce3209a6fa6d9e54b4a4e2ff560cd547d81",
+      "check_react_live.py": "a683084f49cf6632fa150d3e52674780e0e34f82472cb53e8f83f161963406a0",
+      "check_react_loop.py": "f72206ca0f8fad1e1740ddaa925531c61d130c67cdf8436ec703ef50a87cde1f",
+      "check_tracing_live.py": "7277872a5873db24c37032170e6957f06a00fe3a1203e7ee8e0cf68dbb7e0550",
+      "compare_tracing.py": "f3336a626aa158165748ff11a4cf2b638c7322fd4e815881cc31b99fff79aee1",
+      "configs/server_passport.json": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104",
+      "data/manifest.json": "0c9b0149c25d9e53752bdfa736b3dba15b66b657a3cf85053cb6b4927f236521",
+      "data/task_ids.txt": "471b3dabde058ae6ec98117672c002073613328ff841923e07c61d24e8fa5194",
+      "episode_tools.py": "3f82b143fb19d6e2abbfa5e96e88f887160b88f02da0f3077b489c4f0578a5b2",
+      "eval.py": "a34aad8161d4d61770540fa0d0db06adcce3642f7e6c4875463d1131ed59608d",
+      "model_client.py": "75c9fe631011b0fccfb37257da72d2d56e617267fff888b52a5cb0cdbed8aef8",
+      "prediction.md": "4ad2b0228b9335c5bec4ad8355847497478d84827bb46e43618a16bf08999d47",
+      "prepare_version.py": "78f49d9fd186ebea7260556d4481f06d561ba83a1b84d40a82ded541db665792",
+      "prompts/react_system.txt": "926809726ebba0bee5b2d6b2c84109e8de4f0b6dd893146ba6582323e80cceaf",
+      "react_loop.py": "6336cc4947dc343e7242dc2e863c02680e2fbe3e8ca78f42fbe6fc978bc3bf8c",
+      "refresh_base_manifest.py": "7a6aefe625294b3e9f0a140d57f2bc184d37ab7c8d27d94a1696d908917d2831",
+      "requirements.txt": "ef7fd9538a0800b2d1fe87fa06c326c11abdcd64ca075dc4a05c7a0acf1c0551",
+      "test_episode_tools.py": "cb9ed30040ee8f4c1b6ebf2f554e6edb806e2b7d1e1083ab493c863b4a62c8bd",
+      "test_tool_executor.py": "08233e7508778e53177a2c433dd82df47337705e22758c8bf87f19e7fd2de824",
+      "tool_executor.py": "358b0bb3d5d872785f92cb2bfcf93c4871f611e61cc2b661976c8b1fa066d2d4",
+      "update_manifest_hashes.py": "2266e88bec29e5fb4fe7a8b0d74e2d75d49afb564a42e10932ad3c590e83fca2"
+    },
+    "tool_descriptions_sha256": "e5ee7300547cdf1a5a94af10beae8739a2d4c26a0ff7aaede3c33a6c1399aeda",
+    "tool_descriptions_file": "tool_descriptions.json",
+    "tool_count": 24,
+    "benchmark": {
+      "agentdojo_package_version": "0.1.35",
+      "benchmark_version": "v1.2.2",
+      "suite": "workspace",
+      "task_list_file": "task_ids.txt",
+      "task_list_sha256": "471b3dabde058ae6ec98117672c002073613328ff841923e07c61d24e8fa5194",
+      "debug_task_ids": [
+        "user_task_0",
+        "user_task_4",
+        "user_task_8",
+        "user_task_12",
+        "user_task_16",
+        "user_task_20",
+        "user_task_24",
+        "user_task_28",
+        "user_task_32",
+        "user_task_36"
+      ],
+      "final_task_ids": [
+        "user_task_1",
+        "user_task_2",
+        "user_task_3",
+        "user_task_5",
+        "user_task_6",
+        "user_task_7",
+        "user_task_9",
+        "user_task_10",
+        "user_task_11",
+        "user_task_13",
+        "user_task_14",
+        "user_task_15",
+        "user_task_17",
+        "user_task_18",
+        "user_task_19",
+        "user_task_21",
+        "user_task_22",
+        "user_task_23",
+        "user_task_25",
+        "user_task_26",
+        "user_task_27",
+        "user_task_29",
+        "user_task_30",
+        "user_task_31",
+        "user_task_33",
+        "user_task_34",
+        "user_task_35",
+        "user_task_37",
+        "user_task_38",
+        "user_task_39"
+      ]
+    },
+    "packages": {
+      "agentdojo": "0.1.35",
+      "mlflow": "3.17.2",
+      "openai": "3.49.0"
+    },
+    "generation": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 1024,
+      "tool_choice": "auto",
+      "max_calls": 15,
+      "max_tools": 15,
+      "fault_p": 0
+    },
+    "server": {
+      "base_url": "http://127.0.0.1:8080",
+      "health": {
+        "status": "ok"
+      },
+      "models": {
+        "models": [
+          {
+            "name": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "model": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "modified_at": "",
+            "size": "",
+            "digest": "",
+            "type": "model",
+            "description": "",
+            "tags": [
+              ""
+            ],
+            "capabilities": [
+              "completion"
+            ],
+            "parameters": "",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "",
+              "families": [
+                ""
+              ],
+              "parameter_size": "",
+              "quantization_level": ""
+            }
+          }
+        ],
+        "object": "list",
+        "data": [
+          {
+            "id": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "aliases": [
+              "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
+            ],
+            "tags": [],
+            "object": "model",
+            "architecture": {
+              "input_modalities": [
+                "text"
+              ],
+              "output_modalities": [
+                "text"
+              ]
+            },
+            "created": 1794936915,
+            "owned_by": "llamacpp",
+            "meta": {
+              "vocab_type": 2,
+              "n_vocab": 151936,
+              "n_ctx": 32768,
+              "n_ctx_train": 262144,
+              "n_embd": 2560,
+              "n_params": 4022468096,
+              "size": 2491323904,
+              "ftype": "Q4_K - Medium"
+            }
+          }
+        ]
+      },
+      "props": {
+        "default_generation_settings": {
+          "params": {
+            "seed": 4294967295,
+            "temperature": 0.800000011920929,
+            "dynatemp_range": 0.0,
+            "dynatemp_exponent": 1.0,
+            "top_k": 40,
+            "top_p": 0.949999988079071,
+            "min_p": 0.05000000074505806,
+            "top_n_sigma": -1.0,
+            "xtc_probability": 0.0,
+            "xtc_threshold": 0.10000000149011612,
+            "typical_p": 1.0,
+            "repeat_last_n": 64,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "frequency_penalty": 0.0,
+            "dry_multiplier": 0.0,
+            "dry_base": 1.75,
+            "dry_allowed_length": 2,
+            "dry_penalty_last_n": 64,
+            "mirostat": 0,
+            "mirostat_tau": 5.0,
+            "mirostat_eta": 0.10000000149011612,
+            "adaptive_target": -1.0,
+            "adaptive_decay": 0.8999999761581421,
+            "max_tokens": -1,
+            "n_predict": -1,
+            "n_keep": 0,
+            "n_discard": 0,
+            "ignore_eos": false,
+            "stream": false,
+            "n_probs": 0,
+            "min_keep": 0,
+            "chat_format": "Content-only",
+            "reasoning_format": "none",
+            "reasoning_in_content": false,
+            "generation_prompt": "",
+            "samplers": [
+              "penalties",
+              "dry",
+              "top_n_sigma",
+              "top_k",
+              "typ_p",
+              "top_p",
+              "min_p",
+              "xtc",
+              "temperature"
+            ],
+            "speculative.types": "none",
+            "timings_per_token": false,
+            "post_sampling_probs": false,
+            "backend_sampling": false,
+            "lora": []
+          },
+          "n_ctx": 32768
+        },
+        "total_slots": 1,
+        "model_alias": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+        "model_ftype": "Q4_K - Medium",
+        "model_path": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+        "modalities": {
+          "vision": false,
+          "video": false,
+          "audio": false
+        },
+        "media_marker": "<__media_QdOKErL3kBWta0SyZ5A7Af9NamzY7gsS__>",
+        "endpoint_slots": true,
+        "endpoint_props": false,
+        "endpoint_metrics": false,
+        "ui": true,
+        "ui_settings": {},
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+        "chat_template_caps": {
+          "supports_object_arguments": true,
+          "supports_parallel_tool_calls": true,
+          "supports_preserve_reasoning": false,
+          "supports_reasoning_effort": false,
+          "supports_string_content": true,
+          "supports_system_role": true,
+          "supports_tool_calls": true,
+          "supports_tools": true,
+          "supports_typed_content": false,
+          "reasoning_effort_levels": []
+        },
+        "bos_token": "<|endoftext|>",
+        "eos_token": "<|im_end|>",
+        "build_info": "b12032-dde879bc4",
+        "is_sleeping": false,
+        "cors_proxy_enabled": false
+      }
+    },
+    "server_passport": {
+      "recorded_at": "2026-11-18T00:36:39.8274214+07:00",
+      "base_url": "http://127.0.0.1:8080",
+      "model_path": "D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "model_size_bytes": 2497280736,
+      "model_sha256": "2FDE00CE69DD4899C70D020845E2638353015BBA0FDF161B3EB965F2BCA4464E",
+      "server_path": "C:\\Users\\卓大王\\AppData\\Local\\Microsoft\\WinGet\\Packages\\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe\\llama-server.exe",
+      "server_sha256": "FE2957C5FC9DEFB76279A513EA58153B5990C14AF8E2C9D2150C2D194BF72668",
+      "server_file_version": null,
+      "server_command_line": "llama-server  -m D:\\LLM_LR1\\models\\Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf --verbosity 4 --device Vulkan1 --gpu-layers all --ctx-size 32768 --parallel 1 --threads 8 --cache-type-k f16 --cache-type-v f16 --no-cache-prompt --cache-ram 0 --jinja --host 127.0.0.1 --port 8080 ",
+      "server_process_id": 25784
+    },
+    "server_passport_sha256": "0933a38466c0320224a47d78712312889ec4efe4f8b2fec2a12cf3345bae3104",
+    "environment": {
+      "PYTHONHASHSEED": "0"
+    }
+  },
+  "complete": true,
+  "results": [
+    {
+      "task_id": "user_task_0",
+      "run": 1,
+      "utility": false,
+      "run_error": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "token_usage_complete": true,
+      "elapsed_seconds": 0.04547190002631396,
+      "trace_id": null,
+      "record_path": "eval/negative_control/scripted_broken_run1.json"
+    },
+    {
+      "task_id": "user_task_0",
+      "run": 2,
+      "utility": false,
+      "run_error": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "token_usage_complete": true,
+      "elapsed_seconds": 0.047039999975822866,
+      "trace_id": null,
+      "record_path": "eval/negative_control/scripted_broken_run2.json"
+    },
+    {
+      "task_id": "user_task_0",
+      "run": 3,
+      "utility": false,
+      "run_error": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "token_usage_complete": true,
+      "elapsed_seconds": 0.0453181000193581,
+      "trace_id": null,
+      "record_path": "eval/negative_control/scripted_broken_run3.json"
+    }
+  ],
+  "control": {
+    "model_used": false,
+    "scripted_agent_file": "check_negative_control.py",
+    "lose_tool_result": true
+  }
+}
