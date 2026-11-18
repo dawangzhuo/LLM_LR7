@@ -1,3 +1,4 @@
+import os
 import json
 import subprocess
 from copy import deepcopy
@@ -76,7 +77,12 @@ def write_json(path, data):
 
 
 def main():
-    output_dir = ROOT / "eval/negative_control"
+    output_dir = Path(
+    os.environ.get(
+        "LR7_NEGATIVE_CONTROL_DIR",
+        str(ROOT / "eval/negative_control"),
+    )
+).resolve()
     if output_dir.exists():
         raise SystemExit(
             "eval/negative_control already exists. Keep its saved results."

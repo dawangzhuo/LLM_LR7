@@ -1,0 +1,88 @@
+name: LR7 regression
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    env:
+      PYTHONHASHSEED: "0"
+      PYTHONUTF8: "1"
+      LR7_NEGATIVE_CONTROL_DIR: "ci_output/negative_control"
+
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip check
+          exit $LASTEXITCODE
+
+      - name: Run model-free tests
+        id: tests
+        run: |
+          New-Item -ItemType Directory -Path ci_output -Force | Out-Null
+
+          python -m unittest test_gate test_tool_executor test_episode_tools -v 2>&1 |
+            Tee-Object -FilePath ci_output/model_free_tests.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+          python check_react_loop.py 2>&1 |
+            Tee-Object -FilePath ci_output/react_loop.log
+          exit $LASTEXITCODE
+
+      - name: Verify scripted negative control
+        run: |
+          python check_negative_control.py 2>&1 |
+            Tee-Object -FilePath ci_output/negative_control.log
+          exit $LASTEXITCODE
+
+      - name: Compare baseline and AA summaries
+        if: ${{ always() && steps.tests.outcome != 'skipped' }}
+        run: |
+          $arguments = @(
+            "gate.py",
+            "eval/base_final_20261118_172416_841840/summary.json",
+            "eval/base_final_20261118_174828_168091/summary.json",
+            "--report",
+            "ci_output/AA_gate_report.md"
+          )
+
+          if ("${{ steps.tests.outcome }}" -ne "success") {
+            $arguments += "--tests-failed"
+          }
+
+          python @arguments 2>&1 |
+            Tee-Object -FilePath ci_output/gate.log
+          exit $LASTEXITCODE
+
+      - name: Upload reports and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lr7-regression-results
+          path: |
+            ci_output/
+            reports/negative_control_gate_report.md
+          if-no-files-found: warn
